@@ -1,0 +1,75 @@
+{
+    "root": true,
+    "ignorePatterns": [
+      "projects/**/*"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "*.ts"
+        ],
+        "parserOptions": {
+          "project": [
+            "tsconfig.json"
+          ],
+          "createDefaultProgram": true
+        },
+        "extends": [
+          "plugin:@angular-eslint/recommended",
+          "plugin:@angular-eslint/template/process-inline-templates"
+        ],
+        "rules": {
+          "@angular-eslint/directive-selector": [
+            "error",
+            {
+              "type": "attribute",
+              "prefix": "mchat",
+              "style": "camelCase"
+            }
+          ],
+          "@angular-eslint/component-selector": [
+            "error",
+            {
+              "type": "element",
+              "prefix": "mchat",
+              "style": "kebab-case"
+            }
+          ],
+          "semi": [
+            "error",
+            "always"
+          ],
+          "no-extra-bind": "error",
+          "object-curly-spacing": [
+            "error",
+            "always"
+          ],
+          "no-extra-semi": "error",
+          "sort-vars": [
+            "warn"
+          ],
+          "max-params": [
+            "warn",
+            5
+          ],
+          "quotes": [
+            "error",
+            "single"
+          ],
+          "arrow-spacing": "error",
+          "no-unused-expressions": "error",
+          "no-var": "error",
+          "no-unneeded-ternary": "error"
+        }
+      },
+      {
+        "files": [
+          "*.html"
+        ],
+        "extends": [
+          "plugin:@angular-eslint/template/recommended"
+        ],
+        "rules": {}
+      }
+    ]
+  }
