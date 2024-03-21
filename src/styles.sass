@@ -2,12 +2,134 @@
 @import "primeng/resources/primeng.css"
 
 @font-face
-    font-family: 'lato'
-    src: url('/assets/fonts/Lato-Regular.ttf')
-    font-weight: 400
+    font-family: 'quicksand'
+    src: url('/assets/fonts/quicksand.ttf')
+
+:root
+  --error-color: #f0315a
+  --on-error-color: #fefefe
+
+  --positive-color: #22D020
+  --on-positive-color: #212121
+
+  --light-primary-color: #003049
+  --light-primary-lighter-color: #0069a0
+  --light-primary-darker-color: #00263a
+  --light-on-primary-color: #fefefe
+
+  --light-secondary-color: #AB0303
+  --light-secondary-lighter-color: #ed0404
+  --light-secondary-darker-color: #890202
+  --light-on-secondary-color: #fefefe
+
+  --light-accent-color: #ff9f38
+  --light-accent-lighter-color: #ffb260
+  --light-accent-darker-color: #f98100
+  --light-on-accent-color: #212121
+
+  --light-background-color: #fefefe
+  --light-foreground-color: #212121
+
+  --dark-primary-color: #0F3750
+  --dark-primary-lighter-color: #1c6796
+  --dark-primary-darker-color: #0c2c40
+  --dark-on-primary-color: #fefefe
+
+  --dark-secondary-color: #820909
+  --dark-secondary-lighter-color: #c70e0e
+  --dark-secondary-darker-color: #680707
+  --dark-on-secondary-color: #fefefe
+
+  --dark-accent-color: #FF9F38
+  --dark-accent-lighter-color: #ffb260
+  --dark-accent-darker-color: #f98100
+  --dark-on-accent-color: #212121
+
+  --dark-background-color: #212121
+  --dark-foreground-color: #fefefe
+
+  --common-box-shadow: 0px 8px 16px #121212
+  --common-border-radius: 8px
+
+body.theme-light
+  --primary-color: var(--light-primary-color)
+  --primary-lighter-color: var(--light-primary-lighter-color)
+  --primary-darker-color: var(--light-primary-darker-color)
+  --on-primary-color: var(--light-on-primary-color)
+
+  --secondary-color: var(--light-secondary-color)
+  --secondary-lighter-color: var(--light-secondary-lighter-color)
+  --secondary-darker-color: var(--light-secondary-darker-color)
+  --on-secondary-color: var(--light-on-secondary-color)
+
+  --accent-color: var(--light-accent-color)
+  --accent-lighter-color: var(--light-accent-lighter-color)
+  --accent-darker-color: var(--light-accent-darker-color)
+  --on-accent-color: var(--light-on-accent-color)
+
+  --background-color: var(--light-background-color)
+  --foreground-color: var(--light-foreground-color)
+
+  --primary-color: var(--light-primary-color)
+  --primary-lighter-color: var(--light-primary-lighter-color)
+  --primary-darker-color: var(--light-primary-darker-color)
+  --on-primary-color: var(--light-on-primary-color)
+
+  --secondary-color: var(--light-secondary-color)
+  --secondary-lighter-color: var(--light-secondary-lighter-color)
+  --secondary-darker-color: var(--light-secondary-darker-color)
+  --on-secondary-color: var(--light-on-secondary-color)
+
+  --accent-color: var(--light-accent-color)
+  --accent-lighter-color: var(--light-accent-lighter-color)
+  --accent-darker-color: var(--light-accent-darker-color)
+  --on-accent-color: var(--light-on-accent-color)
+
+  --background-color: var(--light-background-color)
+  --foreground-color: var(--light-foreground-color)
+
+body.theme-dark
+  --primary-color: var(--dark-primary-color)
+  --primary-lighter-color: var(--dark-primary-lighter-color)
+  --primary-darker-color: var(--dark-primary-darker-color)
+  --on-primary-color: var(--dark-on-primary-color)
+
+  --secondary-color: var(--dark-secondary-color)
+  --secondary-lighter-color: var(--dark-secondary-lighter-color)
+  --secondary-darker-color: var(--dark-secondary-darker-color)
+  --on-secondary-color: var(--dark-on-secondary-color)
+
+  --accent-color: var(--dark-accent-color)
+  --accent-lighter-color: var(--dark-accent-lighter-color)
+  --accent-darker-color: var(--dark-accent-darker-color)
+  --on-accent-color: var(--dark-on-accent-color)
+
+  --background-color: var(--dark-background-color)
+  --foreground-color: var(--dark-foreground-color)
 
 html, body
-    height: 100%
-    margin: 0
-    padding: 0
+  margin: 0
+  padding: 0
+  height: 100%
+  font-family: 'quicksand'
+  background: var(--background-color)
+  color: var(--foreground-color)
+  transition: 256ms
 
+//   For Primeng
+:root
+  --font-family: 'quicksand'
+  --border-radius: var(--common-border-radius)
+
+//  For Primeng
+button
+    background: var(--primary-color)
+    color: var(--on-primary-color)
+    outline: none
+    border: none
+    border-radius: var(--common-border-radius)
+
+    &:focus, &:active
+        outline: none
+        border: none
+        box-shadow: none

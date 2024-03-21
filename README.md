@@ -1,27 +1,66 @@
-# Web
+# Mollyfish chat Web
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.3.
+This is a Web part for my pet project "Mollyfish chat" chatting application meant to be secure, encrypted and easy to use
 
-## Development server
+## Before you go any further
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+🚧 Work in porgress here 🚧
 
-## Code scaffolding
+Note that this project is not ready yet. Although I am currently working on it, and hopefully you will see progress in the future
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Also, I am just learning the backend and NestJS framework in general. This is not meant to be ideal. In fact nothing is ideal in this world 🤷
 
-## Build
+The mantra:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+-   Perfectionism is obsolete. It makes things more complicated than needed 🙅
+-   To be productive one should be disciplined and dedicated 💁
+-   There is no need to force one to do anything. Otherwise nothing will be done right 🤦
+-   Explicit is better than emplicit 💁
+-   Well organised and intuitive is better than spontaneous and random 💁
+-   Any science at some point may seem magic 🔮
+-   Magic reevaluetes to sciene once studied enough 👨🏻‍🔬
+-   Quantity of content is significant, but the quality is more important
 
-## Running unit tests
+### Introduction
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The app purpose, generaly is to create a chatting application on my own, and provice it with functionality I want
+This pet project was inspred by one of my (once) colleague's one. This version is another attempt in creating such an app
+Another source of inspiration is the fact that Telegram is build by not trustworthy individual, while Whatsapp being a kid of evil corporation, viber being old and Discord being not really reliable in my eyes
 
-## Running end-to-end tests
+## "What's on the menu?" or The What
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Fish!
 
-## Further help
+1. Having fun
+2. [ ] Basic comunications such as:
+    - write messages ✍
+    - forward them 📨
+    - answer ✒
+    - delete messages 🗑
+    - distinct DMs, public Chatrooms, private Chatrooms and, maybe, channels
+3. [ ] End-to-End encryption of messages. Perhaps with some fancy lgorithm 🛡
+4. [ ] Reactions on messages with emojis 🤙
+5. [ ] File sending 📂
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The application in my eyes is sort of Hybrid between Slack and Telegram if talking about the frontend
+
+## The How
+
+1.  [ ] For sending and receiving messages there should be WebSockets
+2.  [ ] Well-tested algorythms to flawlessly execute any operation with no real bugs
+3.  Quality over quantity
+
+Personaly, I'd want to use RxJS and Angular Signals API a lot, since both are powerfull tools. The second one could also increase performance of the app
+
+## The WHen
+
+As soon as possible, idealy
+
+### What does this mean to me
+
+For me this project is a challenge. I want to create something on my own. I want to make something good. To be able to show it and have no hesitation. I want to build something I would **want to use myself**
+Since it is a pet project meant to create a solid portfolio in the first place — it is also a playground to learn
+
+### Note
+
+This project uses Primeng library. However, since the color theme was already predetermined I made a hard decision to customarily style some components with border radiuses, shadows, and colors
