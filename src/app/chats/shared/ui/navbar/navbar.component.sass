@@ -1,0 +1,26 @@
+.chats-navbar
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    padding: 16px 8px
+    height: 100%
+
+    &__upper-section, &__settings-section
+        display: flex
+        flex-direction: column
+        gap: 24px
+        height: 100%
+
+    &__upper-section
+        justify-content: flex-start
+        align-items: center
+
+    &__settings-section
+        justify-content: flex-end
+        align-items: center
+
+    ::ng-deep
+        .p-button
+            padding: .5rem
+            font-size: 18px

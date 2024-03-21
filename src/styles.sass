@@ -1,5 +1,7 @@
-@import "primeng/resources/themes/saga-orange/theme.css"
+@import "primeng/resources/themes/vela-blue/theme.css"
 @import "primeng/resources/primeng.css"
+@import "primeicons/primeicons.css"
+@import "assets/css/_typography"
 
 @font-face
     font-family: 'quicksand'
@@ -111,25 +113,16 @@ html, body
   margin: 0
   padding: 0
   height: 100%
-  font-family: 'quicksand'
   background: var(--background-color)
   color: var(--foreground-color)
   transition: 256ms
+  font-family: 'quicksand'
+
+p
+    margin: 0
+    padding: 0
 
 //   For Primeng
 :root
   --font-family: 'quicksand'
   --border-radius: var(--common-border-radius)
-
-//  For Primeng
-button
-    background: var(--primary-color)
-    color: var(--on-primary-color)
-    outline: none
-    border: none
-    border-radius: var(--common-border-radius)
-
-    &:focus, &:active
-        outline: none
-        border: none
-        box-shadow: none
