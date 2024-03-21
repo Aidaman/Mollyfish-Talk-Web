@@ -39,7 +39,7 @@ export const routes: Routes = [
 		loadChildren: () => import('./settings/settings.module').then(m => m.SettingsModule),
 	},
 	{
-		path: 'error/:code',
+		path: 'error/:statusCode',
 		title: 'mollyfish-talk error',
 		component: ErrorPageComponent,
 	},
