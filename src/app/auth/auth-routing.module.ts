@@ -16,6 +16,20 @@ const routes: Routes = [
 				loadComponent: () => import('./signup/signup.component').then(c => c.SignupComponent),
 			},
 			{
+				path: 'forget-password',
+				loadComponent: () =>
+					import('./forget-password/forget-password.component').then(c => c.ForgetPasswordComponent),
+			},
+			{
+				path: 'recovery',
+				loadComponent: () => import('./recovery/recovery.component').then(c => c.RecoveryComponent),
+			},
+			{
+				path: 'email-confirmation',
+				loadComponent: () =>
+					import('./email-confirmation/email-confirmation.component').then(c => c.EmailConfirmationComponent),
+			},
+			{
 				path: 'register',
 				redirectTo: 'signup',
 				pathMatch: 'full',
