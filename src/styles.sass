@@ -45,7 +45,7 @@
   --dark-primary-color: #FF9D33
   --dark-primary-lighter-color: #ffab52
   --dark-primary-darker-color: #FF8E14
-  --dark-on-primary-color: #fefefe
+  --dark-on-primary-color: #212121
 
   --dark-secondary-color: #D4034E
   --dark-secondary-lighter-color: #D4034E
@@ -146,8 +146,12 @@ html, body
   height: 100%
   background: var(--background-color)
   color: var(--foreground-color)
-  transition: 256ms
-  font-family: 'quicksand'
 
 *
     box-sizing: border-box
+    transition: 256ms
+    font-family: 'quicksand'
+
+button
+    outline: none
+    border: none

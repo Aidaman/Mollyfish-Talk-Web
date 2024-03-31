@@ -1,7 +1,11 @@
+:host
+    width: 100%
+
 .separator
     display: flex
     width: 100%
     gap: 0.5rem
+    align-items: center
 
     &__stroke
         background: var(--foreground-color)
@@ -10,3 +14,9 @@
 
     &__label
         text-transform: lowercase
+
+    &--no-label
+        background: var(--foreground-color)
+        height: 1px
+        width: 100%
+

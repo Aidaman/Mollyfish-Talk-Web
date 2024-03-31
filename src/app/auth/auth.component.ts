@@ -4,12 +4,20 @@ import { FilledButtonComponent } from '../shared/components/buttons/filled-butto
 import { OutlinedButtonComponent } from '../shared/components/buttons/outlined-button/outlined-button.component';
 import { RaisedButtonComponent } from '../shared/components/buttons/raised-button/raised-button.component';
 import { TextButtonComponent } from '../shared/components/buttons/text-button/text-button.component';
+import { SeparatorComponent } from '../shared/components/separator/separator.component';
 
 @Component({
 	selector: 'mchat-auth',
 	standalone: true,
 	templateUrl: './auth.component.html',
 	styleUrl: './auth.component.sass',
-	imports: [RouterOutlet, FilledButtonComponent, OutlinedButtonComponent, RaisedButtonComponent, TextButtonComponent],
+	imports: [
+		RouterOutlet,
+		FilledButtonComponent,
+		OutlinedButtonComponent,
+		RaisedButtonComponent,
+		TextButtonComponent,
+		SeparatorComponent,
+	],
 })
 export class AuthComponent {}

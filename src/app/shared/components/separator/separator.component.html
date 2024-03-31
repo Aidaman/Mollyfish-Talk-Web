@@ -1,5 +1,9 @@
-<div class="separator">
-	<div class="separator__stroke"></div>
-	<small class="separator__label"></small>
-	<div class="separator__stroke"></div>
-</div>
+@if (!label) {
+	<div class="separator--no-label"></div>
+} @else {
+	<div class="separator">
+		<div class="separator__stroke"></div>
+		<small class="separator__label">{{ label }}</small>
+		<div class="separator__stroke"></div>
+	</div>
+}
