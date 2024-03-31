@@ -5,6 +5,7 @@ import { OutlinedButtonComponent } from '../shared/components/buttons/outlined-b
 import { RaisedButtonComponent } from '../shared/components/buttons/raised-button/raised-button.component';
 import { TextButtonComponent } from '../shared/components/buttons/text-button/text-button.component';
 import { SeparatorComponent } from '../shared/components/separator/separator.component';
+import { InputComponent } from '../shared/components/input/input.component';
 
 @Component({
 	selector: 'mchat-auth',
@@ -18,6 +19,7 @@ import { SeparatorComponent } from '../shared/components/separator/separator.com
 		RaisedButtonComponent,
 		TextButtonComponent,
 		SeparatorComponent,
+		InputComponent,
 	],
 })
 export class AuthComponent {}

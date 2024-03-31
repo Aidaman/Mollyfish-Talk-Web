@@ -9,5 +9,5 @@ import { Component, Input } from '@angular/core';
 })
 export class SeparatorComponent {
 	@Input()
-	public label?: string;
+	public hasLabel?: boolean;
 }

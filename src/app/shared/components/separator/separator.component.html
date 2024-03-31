@@ -1,9 +1,11 @@
-@if (!label) {
+@if (!hasLabel) {
 	<div class="separator--no-label"></div>
 } @else {
 	<div class="separator">
 		<div class="separator__stroke"></div>
-		<small class="separator__label">{{ label }}</small>
+		<small class="separator__label">
+			<ng-content></ng-content>
+		</small>
 		<div class="separator__stroke"></div>
 	</div>
 }

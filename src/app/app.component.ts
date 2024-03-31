@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { provideIcons } from '@ng-icons/core';
 import {
@@ -13,7 +14,7 @@ import {
 @Component({
 	selector: 'app-root',
 	standalone: true,
-	imports: [RouterOutlet],
+	imports: [RouterOutlet, FormsModule, ReactiveFormsModule],
 	template: `<router-outlet></router-outlet>`,
 	viewProviders: [provideIcons({ matWbSunny, matNightlight, matGroup, matChat, matWorkspaces, matSearch })],
 })

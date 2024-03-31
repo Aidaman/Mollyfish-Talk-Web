@@ -1,0 +1,37 @@
+.mchat-input
+    display: flex
+    flex-direction: column
+    padding: 0.25rem 0.5rem
+    width: 100%
+
+    .separator
+        display: flex
+        align-items: center
+        gap: 0.25rem
+        width: 100%
+        color: var(--foreground-color)
+
+        &__stroke
+            padding-inline: 0.5rem
+            height: 1px
+            width: 100%
+            background: var(--foreground-color)
+
+            &--smaller
+                height: 1px
+                width: 2rem
+                padding-inline: 0.5rem
+                background: var(--foreground-color)
+
+
+
+    input
+        background: var(--background-color)
+        padding: 0.25rem 0.5rem
+        width: 100%
+        outline: none
+        border: none
+        border-radius: 0.25rem
+
+        &::placeholder
+            color: var(--inactive-color)
