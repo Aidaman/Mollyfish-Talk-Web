@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { Button, ButtonModule } from 'primeng/button';
+import { Button } from '../button';
 
 @Component({
 	selector: 'mchat-filled-button',
 	standalone: true,
-	imports: [ButtonModule],
+	imports: [],
 	templateUrl: './filled-button.component.html',
 	styleUrl: './filled-button.component.sass',
 })

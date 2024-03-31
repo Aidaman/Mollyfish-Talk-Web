@@ -1,10 +1,10 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Button, ButtonModule } from 'primeng/button';
+import { Component } from '@angular/core';
+import { Button } from '../button';
 
 @Component({
 	selector: 'mchat-outlined-button',
 	standalone: true,
-	imports: [ButtonModule],
+	imports: [],
 	templateUrl: './outlined-button.component.html',
 	styleUrl: './outlined-button.component.sass',
 })

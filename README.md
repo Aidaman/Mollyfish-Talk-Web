@@ -60,7 +60,3 @@ As soon as possible, idealy
 
 For me this project is a challenge. I want to create something on my own. I want to make something good. To be able to show it and have no hesitation. I want to build something I would **want to use myself**
 Since it is a pet project meant to create a solid portfolio in the first place — it is also a playground to learn
-
-### Note
-
-This project uses Primeng library. However, since the color theme was already predetermined I made a hard decision to customarily style some components with border radiuses, shadows, and colors

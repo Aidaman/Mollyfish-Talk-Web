@@ -1,17 +1,16 @@
 import { Component } from '@angular/core';
-import { ButtonModule } from 'primeng/button';
-import { AvatarModule } from 'primeng/avatar';
-import { DividerModule } from 'primeng/divider';
-import { ThemeChangeButtonComponent } from '../../../../shared/components/theme-change-button/theme-change-button.component';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { matGroup, matChat, matWorkspaces, matSearch } from '@ng-icons/material-icons/baseline';
+import { RoundIconButtonComponent } from 'shared/components/buttons/round-icon-button/round-icon-button.component';
+import { SeparatorComponent } from 'shared/components/separator/separator.component';
+import { ThemeChangeButtonComponent } from 'shared/components/theme-change-button/theme-change-button.component';
 
 @Component({
 	selector: 'mchat-navbar',
 	standalone: true,
 	templateUrl: './navbar.component.html',
 	styleUrl: './navbar.component.sass',
-	imports: [ButtonModule, ThemeChangeButtonComponent, NgIconComponent, AvatarModule, DividerModule],
 	viewProviders: [provideIcons({ matGroup, matChat, matWorkspaces, matSearch })],
+	imports: [ThemeChangeButtonComponent, NgIconComponent, SeparatorComponent, RoundIconButtonComponent],
 })
 export class NavbarComponent {}

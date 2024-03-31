@@ -1,9 +1,3 @@
-<p-button
-	[rounded]="true"
-	[raised]="true"
-	[text]="true"
-	[style]="{ color: 'var(--foreground-color)' }"
-	(onClick)="switchTheme()"
->
+<mchat-round-icon-button>
 	<ng-icon [name]="currentTheme$ | async | themeIconPipe"></ng-icon>
-</p-button>
+</mchat-round-icon-button>

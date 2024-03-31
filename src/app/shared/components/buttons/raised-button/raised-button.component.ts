@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { Button, ButtonModule } from 'primeng/button';
+import { Button } from '../button';
 
 @Component({
 	selector: 'mchat-raised-button',
 	standalone: true,
-	imports: [ButtonModule],
+	imports: [],
 	templateUrl: './raised-button.component.html',
 	styleUrl: './raised-button.component.sass',
 })
