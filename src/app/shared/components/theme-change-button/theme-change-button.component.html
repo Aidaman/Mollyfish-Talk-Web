@@ -1,3 +1,4 @@
-<mchat-round-icon-button>
-	<ng-icon [name]="currentTheme$ | async | themeIconPipe"></ng-icon>
-</mchat-round-icon-button>
+<mchat-round-icon-button
+	[iconName]="currentTheme$ | async | themeIconPipe"
+	(click)="switchTheme()"
+></mchat-round-icon-button>
