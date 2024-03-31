@@ -15,6 +15,11 @@ const routes: Routes = [
 				path: 'signup',
 				loadComponent: () => import('./signup/signup.component').then(c => c.SignupComponent),
 			},
+			{
+				path: 'register',
+				redirectTo: 'signup',
+				pathMatch: 'full',
+			},
 		],
 	},
 	{

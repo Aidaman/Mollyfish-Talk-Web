@@ -43,6 +43,23 @@ export const routes: Routes = [
 		title: 'mollyfish-talk error',
 		component: ErrorPageComponent,
 	},
+
+	{
+		path: 'login',
+		redirectTo: 'auth',
+		pathMatch: 'full',
+	},
+	{
+		path: 'register',
+		redirectTo: 'auth/signup',
+		pathMatch: 'full',
+	},
+	{
+		path: 'signup',
+		redirectTo: 'auth/signup',
+		pathMatch: 'full',
+	},
+
 	{
 		path: '**',
 		title: 'page not found :(',
