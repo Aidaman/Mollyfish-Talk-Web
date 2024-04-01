@@ -2,10 +2,11 @@
     width: 100%
 
 .separator
-    display: flex
+    display: grid
+    grid-template-columns: auto max-content auto
     width: 100%
     gap: 0.5rem
-    align-items: center
+    place-items: center
 
     &__stroke
         background: var(--foreground-color)

@@ -1,1 +1,13 @@
-<p>recovery works!</p>
+<div class="recovery-heading">
+	<h1 class="recovery__header">Recovery</h1>
+	<p>Enter your email</p>
+</div>
+<div class="recovery__controls">
+	<mchat-input label="email" placeholder="example@mail.com" inputType="email"></mchat-input>
+</div>
+<mchat-filled-button (click)="recovery()">confirm recovery</mchat-filled-button>
+<mchat-redirect-section
+	[link]="link"
+	separatorLabel="Remembered the password? Great!"
+	buttonLabel="sign in!"
+></mchat-redirect-section>

@@ -14,4 +14,7 @@ export class InputComponent {
 
 	@Input({ required: true })
 	public placeholder?: string;
+
+	@Input()
+	public inputType: string = 'text';
 }

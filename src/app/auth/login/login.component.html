@@ -1,1 +1,22 @@
-<p>login works!</p>
+<h1 class="login__header">Login</h1>
+<div class="login__controls">
+	<mchat-input label="username" placeholder="@example-name"></mchat-input>
+	<div class="login__password-section">
+		<mchat-input
+			label="password"
+			placeholder="The most secret password in the world"
+			inputType="password"
+		></mchat-input>
+		<div class="forgot-password-sugestion">
+			<small>Forgot your password?</small>
+			<mchat-text-button (click)="navigateToRecover()">recover</mchat-text-button>
+		</div>
+	</div>
+</div>
+<mchat-checkbox name="remember-me">Keep me signed in</mchat-checkbox>
+<mchat-filled-button (click)="signIn()">sign in</mchat-filled-button>
+<mchat-redirect-section
+	[link]="link"
+	separatorLabel="Don't have an account yet?"
+	buttonLabel="Sign up now!"
+></mchat-redirect-section>

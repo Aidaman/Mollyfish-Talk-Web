@@ -1,1 +1,18 @@
-<p>email-confirmation works!</p>
+<div class="email-confirmation-heading">
+	<h1 class="email-confirmation__header">Confirmation</h1>
+	<p>We sent you an email with confirmation code</p>
+</div>
+<div class="email-confirmation__controls">
+	<mchat-input
+		label="The Code"
+		placeholder="Enter the code you have received in the email"
+		inputType="text"
+	></mchat-input>
+</div>
+<mchat-filled-button (click)="signUp()">sign up</mchat-filled-button>
+<mchat-redirect-section
+	separatorLabel="Haven't receive an email?"
+	buttonLabel="send again"
+	[link]="link"
+	(buttonAction)="resendCode()"
+></mchat-redirect-section>

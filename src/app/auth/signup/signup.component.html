@@ -1,1 +1,21 @@
-<p>signup works!</p>
+<h1 class="signup__header">Signup</h1>
+<div class="signup__controls">
+	<mchat-input label="username" placeholder="@example-name"></mchat-input>
+	<mchat-input label="email" placeholder="example@mail.com" inputType="email"></mchat-input>
+	<mchat-input
+		label="password"
+		placeholder="The most secret password in the world"
+		inputType="password"
+	></mchat-input>
+	<mchat-input
+		label="repeat password"
+		placeholder="The most secret password in the world"
+		inputType="password"
+	></mchat-input>
+</div>
+<mchat-filled-button (click)="confrim()">confrim</mchat-filled-button>
+<mchat-redirect-section
+	[link]="link"
+	separatorLabel="Already have an account?"
+	buttonLabel="sign in!"
+></mchat-redirect-section>

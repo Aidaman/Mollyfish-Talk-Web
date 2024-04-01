@@ -16,12 +16,15 @@ const routes: Routes = [
 				loadComponent: () => import('./signup/signup.component').then(c => c.SignupComponent),
 			},
 			{
-				path: 'forget-password',
-				loadComponent: () =>
-					import('./forget-password/forget-password.component').then(c => c.ForgetPasswordComponent),
+				path: 'new-password',
+				loadComponent: () => import('./new-password/new-password.component').then(c => c.NewPasswordComponent),
 			},
 			{
 				path: 'recovery',
+				loadComponent: () => import('./recovery/recovery.component').then(c => c.RecoveryComponent),
+			},
+			{
+				path: 'new-password',
 				loadComponent: () => import('./recovery/recovery.component').then(c => c.RecoveryComponent),
 			},
 			{
@@ -38,7 +41,7 @@ const routes: Routes = [
 	},
 	{
 		path: '**',
-		redirectTo: '',
+		redirectTo: 'login',
 	},
 ];
 
