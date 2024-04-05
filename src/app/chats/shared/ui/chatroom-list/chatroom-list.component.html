@@ -1,6 +1,7 @@
-<div
-	[style]="{ backgroundColor: currentTheme | async | mchatChatroomListBackgroundColors }"
-	class="chatroom-list-container"
->
-	<p>Chatroom-list work</p>
+<div class="chatroom-list-container">
+	<p>Folders</p>
+	<p>Searchfield</p>
+	@for (chatroom of chatType | getChatrooms | async; track $index) {
+		<mchat-chatroom-short-profile [chatroom]="chatroom" [isActive]="chatroom.id === chatId" />
+	}
 </div>

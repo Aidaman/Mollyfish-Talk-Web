@@ -1,7 +1,8 @@
 <div class="chats-layout">
 	<mchat-navbar />
-	<mchat-chatroom-list />
+	<mchat-chatroom-list [chatType]="chatroomType$ | async" [chatId]="chatroomId$ | async" />
 	<div class="chats-layout__area">
-		<router-outlet />
+		<!-- <router-outlet /> -->
+		<mchat-chatroom [chatId]="chatroomId$ | async" [chatType]="chatroomType$ | async"></mchat-chatroom>
 	</div>
 </div>

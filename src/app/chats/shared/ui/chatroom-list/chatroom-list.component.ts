@@ -1,17 +1,21 @@
-import { Component, inject } from '@angular/core';
-import { ThemeService } from '../../../../shared/services/theme.service';
-import { BehaviorSubject } from 'rxjs';
-import { ChatroomListBackgroundColorsPipe } from './chatroom-list-background-colors.pipe';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { GetChatroomsPipe } from './get-chatrooms.pipe';
+import { ChatroomShortProfileComponent } from './chatroom-short-profile/chatroom-short-profile.component';
+import { ChatroomId } from 'chats/shared/models/chatroom-id.type';
+import { ChatroomTypes } from 'chats/shared/models/enums/room-types.enum';
 
 @Component({
 	selector: 'mchat-chatroom-list',
 	standalone: true,
 	templateUrl: './chatroom-list.component.html',
 	styleUrl: './chatroom-list.component.sass',
-	imports: [ChatroomListBackgroundColorsPipe, CommonModule],
+	imports: [CommonModule, ChatroomShortProfileComponent, GetChatroomsPipe],
 })
 export class ChatroomListComponent {
-	private themeService: ThemeService = inject(ThemeService);
-	public currentTheme: BehaviorSubject<string> = this.themeService.currentTheme$;
+	@Input({ required: true })
+	public chatType: ChatroomTypes | null = ChatroomTypes.DIRECT_MESSAGES;
+
+	@Input({ required: true })
+	public chatId: ChatroomId | null = 'none';
 }
