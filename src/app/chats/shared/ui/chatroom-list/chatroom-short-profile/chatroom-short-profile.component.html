@@ -1,1 +1,16 @@
-<p (click)="onClick(chatroom.id, chatroom.roomType)">{{ chatroom.name }} {{ isActive }}</p>
+<div
+	class="chatroom-short-profile__card"
+	[ngClass]="{ 'chatroom-short-profile__card--active': isActive }"
+	(click)="onClick(chatroom.id, chatroom.roomType)"
+>
+	<img [src]="chatroom.avatarUrl" alt="" class="chatroom-short-profile__avatar" />
+	<div class="chatroom-short-profile__info-column">
+		<div class="chatroom-short-profile__header">
+			<p>{{ chatroom.name }}</p>
+			<mchat-read-check [messageReadBy]="chatroom.lastMessage.usersRead"></mchat-read-check>
+		</div>
+		<div class="chatroom-short-profile__last-message-info">
+			<small>{{ chatroom.lastMessage.datePublished | date: 'dd.MM.YYYY | HH:mm' }}</small>
+		</div>
+	</div>
+</div>

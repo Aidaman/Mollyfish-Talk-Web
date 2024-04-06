@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { NavbarComponent } from './shared/ui/navbar/navbar.component';
+import { NavbarComponent } from '../shared/components/navbar/navbar.component';
 import { ChatroomListComponent } from './shared/ui/chatroom-list/chatroom-list.component';
 import { ActivatedRoute, RouterOutlet } from '@angular/router';
 import { Observable, catchError, map, of, tap, throwError } from 'rxjs';

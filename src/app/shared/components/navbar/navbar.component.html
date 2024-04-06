@@ -1,7 +1,15 @@
 <div class="chats-navbar">
 	<div class="chats-navbar__upper-section">
-		<mchat-round-icon-button iconName="matGroup" (click)="openGroupChats()"></mchat-round-icon-button>
-		<mchat-round-icon-button iconName="matChat" (click)="openDirectMessages()"></mchat-round-icon-button>
+		<mchat-round-icon-button
+			iconName="matGroup"
+			[isActive]="(chatType$ | async) === 'group-chat'"
+			(click)="openGroupChats()"
+		></mchat-round-icon-button>
+		<mchat-round-icon-button
+			iconName="matChat"
+			[isActive]="(chatType$ | async) === 'direct-messages'"
+			(click)="openDirectMessages()"
+		></mchat-round-icon-button>
 		<mchat-round-icon-button iconName="matWorkspaces"></mchat-round-icon-button>
 		<mchat-round-icon-button iconName="matSearch"></mchat-round-icon-button>
 		<mchat-separator></mchat-separator>

@@ -43,6 +43,7 @@
   --light-foreground-color: #212121
   --light-inactive-color: #868686
 
+  --light-common-box-shadow: 0px 2px 4px #21212140
 
 
 
@@ -78,7 +79,8 @@
   --dark-foreground-color: #fefefe
   --dark-inactive-color: #868686
 
-  --common-box-shadow: 0px 8px 16px #121212
+  --dark-common-box-shadow: 0px 2px 4px #00000040
+
   --common-border-radius: 8px
 
 body.theme-light
@@ -114,6 +116,8 @@ body.theme-light
   --raised-button-shadow: var(--light-raised-button-shadow)
   --raised-button-active-shadow: var(--light-raised-button-active-shadow)
 
+  --common-box-shadow: var(--light-common-box-shadow)
+
 body.theme-dark
   --primary-color: var(--dark-primary-color)
   --primary-lighter-color: var(--dark-primary-lighter-color)
@@ -147,6 +151,8 @@ body.theme-dark
   --raised-button-shadow: var(--dark-raised-button-shadow)
   --raised-button-active-shadow: var(--dark-raised-button-active-shadow)
 
+  --common-box-shadow: var(--dark-common-box-shadow)
+
 html, body
   margin: 0
   padding: 0
@@ -159,6 +165,21 @@ html, body
     box-sizing: border-box
     font-family: 'quicksand'
 
+    &::-webkit-scrollbar
+        width: 0.25rem
+
+    &::-webkit-scrollbar-track
+        background: transparent
+        border-radius: 2rem
+
+    &::-webkit-scrollbar-thumb
+        border-radius: 2rem
+        background: #aaaaaa
+
+    &::-webkit-scrollbar-thumb:hover
+        background: var(--inactive-color)
+
 button
     outline: none
     border: none
+

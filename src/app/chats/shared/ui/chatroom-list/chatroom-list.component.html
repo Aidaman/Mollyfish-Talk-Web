@@ -1,7 +1,13 @@
-<div class="chatroom-list-container">
-	<p>Folders</p>
-	<p>Searchfield</p>
-	@for (chatroom of chatType | getChatrooms | async; track $index) {
-		<mchat-chatroom-short-profile [chatroom]="chatroom" [isActive]="chatroom.id === chatId" />
-	}
+<div class="chatroom-list__container">
+	<div class="chatroom-list__header">
+		<p>Folders</p>
+	</div>
+	<div class="chatroom-list__search-field-container">Searchfield</div>
+	<div class="chatroom-list__body">
+		<div class="chatroom-list__chatrooms">
+			@for (chatroom of chatType | getChatrooms | async; track $index) {
+				<mchat-chatroom-short-profile [chatroom]="chatroom" [isActive]="chatroom.id === chatId" />
+			}
+		</div>
+	</div>
 </div>
