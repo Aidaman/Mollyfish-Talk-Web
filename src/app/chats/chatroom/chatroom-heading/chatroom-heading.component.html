@@ -1,0 +1,19 @@
+@if (!chatroom) {
+	'Something went wrong'
+} @else {
+	<header class="chatroom-heading">
+		<div class="chatroom-heading__chatroom-info">
+			<mchat-avatar [avatarUrl]="chatroom.avatarUrl" />
+			<div class="chatroom-heading__name">
+				<p>{{ chatroom.name }}</p>
+				<small>
+					@if (chatroom! | isDirectMessages) {
+						{{ chatroom.lastAction | date: 'YYYY.MM.dd' }}
+					} @else {
+						{{ chatroom.participantsIds.length }} participate
+					}
+				</small>
+			</div>
+		</div>
+	</header>
+}

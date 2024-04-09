@@ -1,0 +1,27 @@
+.chatroom-heading
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0.25rem 1rem
+    box-shadow: 0 2px 4px 0 #21212120
+
+    &__chatroom-info
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 0.5rem
+
+    &__name
+        display: flex
+        flex-direction: column
+
+        small
+            color: var(--inactive-color)
+
+        p, small
+            line-height: 1.2
+
+    ::ng-deep
+        mchat-avatar
+            width: 2.5rem
+            height: 2.5rem

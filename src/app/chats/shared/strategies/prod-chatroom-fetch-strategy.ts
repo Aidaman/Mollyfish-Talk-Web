@@ -5,13 +5,18 @@ import { Chatroom, ChatroomShortProifle } from '../models/entities/chatroom.mode
 import { MOCK_CHATROOM_LIST } from '../data/mock-chatroom-list.data';
 import { ID } from 'shared/models/id.type';
 import { ChatroomTypes } from '../models/enums/room-types.enum';
+import { ChatroomId } from '../models/chatroom-id.type';
 
 export class ProdChatroomFetchStrategy extends ChatroomFetchStrategy {
 	constructor(private readonly http: HttpClient) {
 		super();
 	}
 
-	public override fetchFor(userId: ID, roomType: ChatroomTypes): Observable<ChatroomShortProifle[]> {
+	public override fetchForMany(userId: ID, roomType: ChatroomTypes): Observable<ChatroomShortProifle[]> {
 		return of(MOCK_CHATROOM_LIST.filter(chatroom => chatroom.participantsIds.includes(userId)));
+	}
+
+	public override fetchForOne(userId: ID, roomId: ChatroomId): Observable<Chatroom | undefined> {
+		return of(MOCK_CHATROOM_LIST.find(room => room.participantsIds.includes(userId) && room.id === roomId));
 	}
 }

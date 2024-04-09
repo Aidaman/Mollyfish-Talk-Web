@@ -1,3 +1,7 @@
 @if (!chatId || chatId === 'none') {
 	<mchat-chatroom-not-selected />
+} @else {
+	<div class="chatroom">
+		<mchat-chatroom-heading [chatroom]="chatId | getChatroom | async"></mchat-chatroom-heading>
+	</div>
 }

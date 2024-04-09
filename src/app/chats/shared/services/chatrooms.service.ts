@@ -7,6 +7,7 @@ import { Chatroom, ChatroomShortProifle } from '../models/entities/chatroom.mode
 import { chatroomStrategyFactory } from '../strategies/chatroom-fetch-factory';
 import { ChatroomTypes } from '../models/enums/room-types.enum';
 import { UserService } from 'shared/services/user.service';
+import { ChatroomId } from '../models/chatroom-id.type';
 
 @Injectable({
 	providedIn: 'root',
@@ -21,6 +22,10 @@ export class ChatroomsService {
 	}
 
 	public provideChatroomList$(chatroomType: ChatroomTypes): Observable<ChatroomShortProifle[]> {
-		return this.chatroomFetchStrategy.fetchFor(this.userService.currentUserId, chatroomType);
+		return this.chatroomFetchStrategy.fetchForMany(this.userService.currentUserId, chatroomType);
+	}
+
+	public provideChatroomById$(id: ChatroomId): Observable<Chatroom | undefined> {
+		return this.chatroomFetchStrategy.fetchForOne(this.userService.currentUserId, id);
 	}
 }

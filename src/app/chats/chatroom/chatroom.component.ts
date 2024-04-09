@@ -5,13 +5,22 @@ import { ReadCheckComponent } from '../shared/ui/read-check/read-check.component
 import { CommonModule } from '@angular/common';
 import { ChatroomBackgroundPipe } from './chatroom-not-selected/chatroom-background.pipe';
 import { ChatroomNotSelectedComponent } from './chatroom-not-selected/chatroom-not-selected.component';
+import { ChatroomHeadingComponent } from './chatroom-heading/chatroom-heading.component';
+import { GetChatroomPipe } from './get-chatroom.pipe';
 
 @Component({
 	selector: 'mchat-chatroom',
 	standalone: true,
 	templateUrl: './chatroom.component.html',
 	styleUrl: './chatroom.component.sass',
-	imports: [ReadCheckComponent, CommonModule, ChatroomBackgroundPipe, ChatroomNotSelectedComponent],
+	imports: [
+		ReadCheckComponent,
+		CommonModule,
+		ChatroomBackgroundPipe,
+		ChatroomNotSelectedComponent,
+		ChatroomHeadingComponent,
+		GetChatroomPipe,
+	],
 })
 export class ChatroomComponent {
 	@Input({ required: true })
