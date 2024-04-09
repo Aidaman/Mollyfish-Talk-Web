@@ -19,7 +19,16 @@ import {
 	imports: [RouterOutlet, FormsModule, ReactiveFormsModule],
 	template: `<router-outlet></router-outlet>`,
 	viewProviders: [
-		provideIcons({ matWbSunny, matNightlight, matGroup, matChat, matWorkspaces, matSearch, matDone, matDoneAll }),
+		provideIcons({
+			matWbSunny,
+			matNightlight,
+			matGroup,
+			matChat,
+			matWorkspaces,
+			matSearch,
+			matDone,
+			matDoneAll,
+		}),
 	],
 })
 export class AppComponent {}

@@ -2,7 +2,8 @@
 	<div class="chatroom-list__header">
 		<p>Folders</p>
 	</div>
-	<div class="chatroom-list__search-field-container">Searchfield</div>
+	<mchat-search placeholder="Search for a chat" label=""></mchat-search>
+	<!-- <div class="chatroom-list__search-field-container">Searchfield</div> -->
 	<div class="chatroom-list__body">
 		<div class="chatroom-list__chatrooms">
 			@for (chatroom of chatType | getChatrooms | async; track $index) {

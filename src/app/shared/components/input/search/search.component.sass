@@ -1,0 +1,26 @@
+.mchat-search
+    display: flex
+    align-items: center
+    padding: 0.25rem 0.5rem
+    width: 100%
+    border-radius: var(--common-border-radius)
+    background: var(--background-color)
+    box-shadow: 0 2px 4px 0 #21212140
+    transition: all 256ms
+
+    &:hover
+        box-shadow: none
+
+    & > *
+        color: var(--inactive-color)
+        transition: all 256ms
+
+    input
+        padding: 0.25rem 0.5rem
+        width: 100%
+        outline: none
+        border: none
+
+    ::ng-deep
+        ng-icon
+            font-size: 1.2rem
