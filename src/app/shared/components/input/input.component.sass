@@ -28,7 +28,7 @@
         width: 100%
         outline: none
         border: none
-        border-radius: 0.25rem
+        border-radius: calc( var(--common-border-radius) * 2 )
         box-shadow: 0 2px 4px 0 #21212140
 
         &:hover
@@ -36,7 +36,7 @@
 
         &:focus
             box-shadow: none
-            border-radius: 0.5rem
+            border-radius: var(--common-border-radius)
 
         &::placeholder
             color: var(--inactive-color)

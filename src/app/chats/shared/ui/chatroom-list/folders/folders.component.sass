@@ -1,0 +1,20 @@
+.folders
+    display: flex
+    align-items: flex-end
+    padding: 0.75rem 0.5rem 2px
+    box-shadow: 0 2px 4px 0 #21212120
+    gap: 0.375rem
+    height: 3rem
+    width: 100%
+
+    *
+        transition: 256ms
+
+    .folder
+        font-weight: 500
+        padding: 2px 0.5rem 0
+        cursor: pointer
+
+        &--active
+            color: var(--primary-color)
+            border-bottom: solid 1px var(--primary-color)

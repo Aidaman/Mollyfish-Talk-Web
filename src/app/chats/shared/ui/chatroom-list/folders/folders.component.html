@@ -1,0 +1,13 @@
+@if (!folders || folders!.length < 1) {
+} @else {
+	<div class="folders">
+		@for (folder of folders; track $index) {
+			<p
+				[ngClass]="{ folder: true, 'folder--active': activeFolderId === folder.id }"
+				(click)="selectFolder(folder.id)"
+			>
+				{{ folder.name }}
+			</p>
+		}
+	</div>
+}
