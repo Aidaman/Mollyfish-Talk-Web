@@ -1,1 +1,3 @@
-<p>chatroom {{ chatId }} {{ chatType }} works!</p>
+@if (!chatId || chatId === 'none') {
+	<mchat-chatroom-not-selected />
+}
