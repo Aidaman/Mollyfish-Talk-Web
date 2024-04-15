@@ -9,7 +9,9 @@
 		<mchat-search placeholder="Search for a chat" label=""></mchat-search>
 		<div class="chatroom-list__chatrooms">
 			@for (chatroom of chatType | getChatrooms | async; track $index) {
-				<mchat-chatroom-short-profile [chatroom]="chatroom" [isActive]="chatroom.id === chatId" />
+				@if (chatroom | applyFolder: activeFolder) {
+					<mchat-chatroom-short-profile [chatroom]="chatroom" [isActive]="chatroom.id === chatId" />
+				}
 			}
 		</div>
 	</div>

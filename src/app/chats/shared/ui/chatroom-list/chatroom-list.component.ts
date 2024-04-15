@@ -9,13 +9,21 @@ import { FoldersComponent } from './folders/folders.component';
 import { MOCK_CHATROOM_FOLDERS } from 'chats/shared/data/mock-chatroom-folder-list.data';
 import { ChatFolder } from 'chats/shared/models/entities/chat-folders';
 import { ID } from 'shared/models/id.type';
+import { ApplyFolderPipe } from './apply-folder.pipe';
 
 @Component({
 	selector: 'mchat-chatroom-list',
 	standalone: true,
 	templateUrl: './chatroom-list.component.html',
 	styleUrl: './chatroom-list.component.sass',
-	imports: [CommonModule, ChatroomShortProfileComponent, GetChatroomsPipe, SearchComponent, FoldersComponent],
+	imports: [
+		CommonModule,
+		ChatroomShortProfileComponent,
+		GetChatroomsPipe,
+		SearchComponent,
+		FoldersComponent,
+		ApplyFolderPipe,
+	],
 })
 export class ChatroomListComponent {
 	@Input({ required: true })
@@ -26,9 +34,12 @@ export class ChatroomListComponent {
 
 	folders: ChatFolder[] = MOCK_CHATROOM_FOLDERS;
 
-	activeFolderId: ID = this.folders?.at(1)?.id ?? 1;
+	activeFolderId: ID = this.folders?.at(0)?.id ?? 1;
+
+	activeFolder: ChatFolder = this.folders[0];
 
 	public selectFolder(selectedFodlerId: ID): void {
 		this.activeFolderId = selectedFodlerId;
+		this.activeFolder = this.folders.find(f => f.id === selectedFodlerId)!;
 	}
 }

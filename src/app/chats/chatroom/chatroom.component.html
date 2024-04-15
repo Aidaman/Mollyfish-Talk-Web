@@ -3,5 +3,13 @@
 } @else {
 	<div class="chatroom">
 		<mchat-chatroom-heading [chatroom]="chatId | getChatroom | async"></mchat-chatroom-heading>
+		<ul class="chatroom__message-list">
+			@for (message of chatId | getMessages | async; track $index) {
+				<li class="chatroom__message-list-item">
+					<mchat-message [currentUserId]="currentUserId" [model]="message"></mchat-message>
+				</li>
+			}
+		</ul>
+		<div class="input">input</div>
 	</div>
 }

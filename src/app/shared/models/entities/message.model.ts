@@ -1,4 +1,5 @@
 import { ID } from '../id.type';
+import { User } from './user.model';
 
 export type Message = {
 	id: ID;
@@ -10,18 +11,24 @@ export type Message = {
 	hasLinkedContent: boolean;
 };
 
-export type MessageDetails = {
+export type MessageDetails = Message & {
 	messageType: MessageTypes;
-	reactions: Reaction;
+	reactions: Reaction[];
 	replies: Message[];
 	isPinned: boolean;
 	linkedContent: string[]; //URL for images / videos / GIFs / etc.
+	creator: User;
 };
 
 export enum MessageStatuses {
 	PLAIN,
 	EDITED,
 }
+
+export type ReactionDTO = {
+	value: string;
+	userId: ID;
+};
 
 export type Reaction = {
 	amount: number;

@@ -1,0 +1,18 @@
+<div class="message">
+	<mchat-avatar [avatarUrl]="model.creator.avatarUrl" />
+	<div class="message__content-container">
+		<div class="message-body">
+			<div class="message-body__heading">
+				<p>
+					<strong> {{ model.creator.name }} | {{ model.creator.tag }} </strong>
+					<small class="note"> {{ model.datePublished | date: 'hh:mm dd.MM.YYYY' }} </small>
+				</p>
+				<mchat-read-check [messageReadBy]="model.usersRead"></mchat-read-check>
+			</div>
+			<small class="message-body__content">
+				{{ model.content }}
+			</small>
+		</div>
+		<div class="reactions"></div>
+	</div>
+</div>

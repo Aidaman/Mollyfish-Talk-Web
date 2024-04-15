@@ -1,0 +1,29 @@
+.message
+    display: flex
+    gap: 0.25rem
+
+    .message-body
+        display: flex
+        flex-direction: column
+        gap: 0.25rem
+        min-width: 16rem
+        max-width: 40rem
+        padding: 0.375rem 0.625rem
+        background: #86868629
+        border-radius: var(--common-border-radius)
+
+        &__heading
+            display: flex
+            justify-content: space-between
+            align-items: center
+            gap: 1rem
+
+            p
+                display: flex
+                align-items: center
+                gap: 0.5rem
+
+    ::ng-deep
+        .avatar
+            max-width: 2rem
+            max-height: 2rem
