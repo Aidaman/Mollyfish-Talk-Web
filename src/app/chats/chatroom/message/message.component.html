@@ -13,6 +13,29 @@
 				{{ model.content }}
 			</small>
 		</div>
-		<div class="reactions"></div>
+		<div class="reactions">
+			@if (model.reactions.length > 0) {
+				@for (reaction of model.reactions; track $index) {
+					<mchat-reaction
+						[model]="reaction"
+						[currentUserId]="currentUserId"
+						(onClick)="sendSameReaction(reaction)"
+					></mchat-reaction>
+				}
+				<mchat-round-icon-button
+					class="add-reaction-button"
+					(click)="addNewReactionClick(model.id)"
+					iconName="matEmojiEmotions"
+				/>
+			}
+		</div>
 	</div>
+
+	@if (model.reactions.length < 1) {
+		<mchat-round-icon-button
+			class="add-reaction-button"
+			(click)="addNewReactionClick(model.id)"
+			iconName="matEmojiEmotions"
+		/>
+	}
 </div>

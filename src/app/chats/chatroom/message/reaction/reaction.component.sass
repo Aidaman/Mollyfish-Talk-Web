@@ -1,0 +1,17 @@
+.reaction
+    border: none
+    outline: none
+    border-radius: 4rem
+    transition: all 256ms
+    background: var(--text-button-color)
+
+    &--active
+        background: var(--text-button-active-color)
+        box-shadow: var(--raised-button-active-shadow)
+
+    &:hover
+        background: var(--text-button-hover-color)
+
+    p
+        color: var(--foreground-color)
+        font-weight: 500

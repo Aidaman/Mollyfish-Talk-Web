@@ -1,17 +1,20 @@
 import { Component, Input, inject } from '@angular/core';
 import { AvatarComponent } from '../../../shared/components/avatar/avatar.component';
-import { Message, MessageDetails, ReactionDTO } from 'shared/models/entities/message.model';
+import { Message, MessageDetails, Reaction, ReactionDTO } from 'shared/models/entities/message.model';
 import { ID } from 'shared/models/id.type';
 import { MessageService } from 'chats/shared/services/message.service';
 import { CommonModule } from '@angular/common';
 import { ReadCheckComponent } from '../../shared/ui/read-check/read-check.component';
+import { ReactionComponent } from './reaction/reaction.component';
+import { UserService } from 'shared/services/user.service';
+import { RoundIconButtonComponent } from 'shared/components/buttons/round-icon-button/round-icon-button.component';
 
 @Component({
 	selector: 'mchat-message',
 	standalone: true,
 	templateUrl: './message.component.html',
 	styleUrl: './message.component.sass',
-	imports: [AvatarComponent, CommonModule, ReadCheckComponent],
+	imports: [AvatarComponent, CommonModule, ReadCheckComponent, ReactionComponent, RoundIconButtonComponent],
 })
 export class MessageComponent {
 	@Input({ required: true })
@@ -61,5 +64,25 @@ export class MessageComponent {
                 return
         }
         */
+	}
+
+	public sendSameReaction(reaction: Reaction): void {
+		this.model.reactions = this.model.reactions.map(r => {
+			if (r.value.toString() !== reaction.value.toString()) {
+				return r;
+			}
+
+			if (r.userIds.includes(this.currentUserId)) {
+				return {
+					...r,
+					userIds: r.userIds.filter(id => id !== this.currentUserId),
+				};
+			} else return { ...r, userIds: [...r.userIds, this.currentUserId] };
+		});
+	}
+
+	public addNewReactionClick(messageId: ID): void {
+		console.log('new reaction action');
+		//this.messageService.addReactionForMessage(messageId)
 	}
 }

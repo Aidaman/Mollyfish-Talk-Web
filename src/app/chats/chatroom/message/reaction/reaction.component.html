@@ -1,0 +1,9 @@
+<button
+	[ngClass]="{ reaction: true, 'reaction--active': model.userIds.includes(currentUserId) }"
+	(click)="sendSameReaction()"
+>
+	<p>
+		{{ model.userIds.length }}
+		{{ model.value }}
+	</p>
+</button>

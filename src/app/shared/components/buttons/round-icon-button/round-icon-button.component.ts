@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { RaisedButtonComponent } from '../raised-button/raised-button.component';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
-import { matGroup, matChat, matWorkspaces, matSearch } from '@ng-icons/material-icons/baseline';
+import { matGroup, matChat, matWorkspaces, matSearch, matEmojiEmotions } from '@ng-icons/material-icons/baseline';
 import { Button } from '../button';
 import { CommonModule } from '@angular/common';
 
@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 	templateUrl: './round-icon-button.component.html',
 	styleUrl: './round-icon-button.component.sass',
 	imports: [CommonModule, RaisedButtonComponent, NgIconComponent],
-	viewProviders: [provideIcons({ matGroup, matChat, matWorkspaces, matSearch })],
+	viewProviders: [provideIcons({ matGroup, matChat, matWorkspaces, matSearch, matEmojiEmotions })],
 })
 export class RoundIconButtonComponent extends Button {
 	@Input({ required: true })

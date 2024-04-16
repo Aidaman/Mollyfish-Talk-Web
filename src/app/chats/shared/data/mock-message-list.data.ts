@@ -114,7 +114,16 @@ export const MOCK_MESSAGES_DETAILS: MessageDetails[] = [
 		hasLinkedContent: false,
 		isPinned: false,
 		linkedContent: [],
-		reactions: [],
+		reactions: [
+			{
+				userIds: [2],
+				value: '🐠',
+			},
+			{
+				userIds: [2],
+				value: '🐧',
+			},
+		],
 		replies: [],
 		messageType: MessageTypes.PLAIN,
 		creator: {

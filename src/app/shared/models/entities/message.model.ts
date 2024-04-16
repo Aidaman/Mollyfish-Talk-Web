@@ -31,9 +31,8 @@ export type ReactionDTO = {
 };
 
 export type Reaction = {
-	amount: number;
 	value: string;
-	userId: ID;
+	userIds: ID[];
 };
 
 export enum MessageTypes {

@@ -1,6 +1,7 @@
 .message
     display: flex
     gap: 0.25rem
+    width: fit-content
 
     .message-body
         display: flex
@@ -22,6 +23,24 @@
                 display: flex
                 align-items: center
                 gap: 0.5rem
+
+    .reactions
+        display: flex
+        margin-top: 2px
+        gap: 0.25rem
+
+
+    .add-reaction-button
+        display: flex
+        align-self: flex-end
+        visibility: hidden
+
+        &:hover
+            visibility: visible
+
+    &:hover
+        .add-reaction-button
+            visibility: visible
 
     ::ng-deep
         .avatar

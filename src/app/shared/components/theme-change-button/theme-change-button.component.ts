@@ -1,4 +1,4 @@
-import { Component, Inject, Renderer2, inject } from '@angular/core';
+import { Component, Inject, OnInit, Renderer2, inject } from '@angular/core';
 import { ThemeService } from '../../services/theme.service';
 import { ThemePipe } from './theme.pipe';
 import { CommonModule, DOCUMENT } from '@angular/common';
@@ -13,7 +13,7 @@ import { RoundIconButtonComponent } from '../buttons/round-icon-button/round-ico
 	styleUrl: './theme-change-button.component.sass',
 	imports: [ThemePipe, CommonModule, NgIconComponent, RoundIconButtonComponent],
 })
-export class ThemeChangeButtonComponent {
+export class ThemeChangeButtonComponent implements OnInit {
 	private themeService: ThemeService = inject(ThemeService);
 	public currentTheme$: BehaviorSubject<string> = this.themeService.currentTheme$;
 
@@ -21,6 +21,10 @@ export class ThemeChangeButtonComponent {
 		@Inject(DOCUMENT) private document: Document,
 		private renderer: Renderer2,
 	) {}
+
+	public ngOnInit(): void {
+		this.applyTheme(this.currentTheme$.getValue());
+	}
 
 	private applyTheme(theme: string) {
 		this.renderer.setAttribute(this.document.body, 'class', theme);
