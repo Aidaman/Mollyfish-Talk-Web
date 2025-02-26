@@ -11,6 +11,7 @@ import { MessageComponent } from './message/message.component';
 import { UserService } from 'shared/services/user.service';
 import { ID } from 'shared/models/id.type';
 import { GetMessagesPipe } from './get-messages.pipe';
+import { MessageInputComponent } from './message-input/message-input.component';
 
 @Component({
 	selector: 'mchat-chatroom',
@@ -26,6 +27,7 @@ import { GetMessagesPipe } from './get-messages.pipe';
 		GetChatroomPipe,
 		MessageComponent,
 		GetMessagesPipe,
+		MessageInputComponent,
 	],
 })
 export class ChatroomComponent {

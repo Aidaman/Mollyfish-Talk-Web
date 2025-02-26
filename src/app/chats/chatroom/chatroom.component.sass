@@ -1,6 +1,6 @@
 .chatroom
-    display: grid
-    grid-template-rows: 3rem auto 2rem
+    display: flex
+    flex-direction: column
     height: 100vh
 
     &__message-list
@@ -10,10 +10,7 @@
         margin: 0
         padding: 1rem 0.5rem
         overflow-y: auto
-        height: 100%
+        height: calc( 100% - 6rem )
 
     &__message-list-item
         list-style-type: none
-
-.input
-    height: 2rem

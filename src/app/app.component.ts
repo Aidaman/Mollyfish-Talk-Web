@@ -11,6 +11,9 @@ import {
 	matSearch,
 	matDone,
 	matDoneAll,
+	matSend,
+	matAttachFile,
+	matEmojiEmotions,
 } from '@ng-icons/material-icons/baseline';
 
 @Component({
@@ -28,6 +31,9 @@ import {
 			matSearch,
 			matDone,
 			matDoneAll,
+			matSend,
+			matAttachFile,
+			matEmojiEmotions,
 		}),
 	],
 })

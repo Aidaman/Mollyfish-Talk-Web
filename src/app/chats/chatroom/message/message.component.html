@@ -4,7 +4,9 @@
 		<div class="message-body">
 			<div class="message-body__heading">
 				<p>
-					<strong> {{ model.creator.name }} | {{ model.creator.tag }} </strong>
+					<strong> {{ model.creator.name }}</strong>
+					|
+					<strong>{{ model.creator.tag }}</strong>
 					<small class="note"> {{ model.datePublished | date: 'hh:mm dd.MM.YYYY' }} </small>
 				</p>
 				<mchat-read-check [messageReadBy]="model.usersRead"></mchat-read-check>
