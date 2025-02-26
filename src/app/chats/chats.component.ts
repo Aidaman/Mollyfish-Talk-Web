@@ -9,11 +9,10 @@ import { ChatroomId } from './shared/models/chatroom-id.type';
 import { ChatroomComponent } from './chatroom/chatroom.component';
 
 @Component({
-	selector: 'mchat-chats',
-	standalone: true,
-	templateUrl: './chats.component.html',
-	styleUrl: './chats.component.sass',
-	imports: [NavbarComponent, ChatroomListComponent, RouterOutlet, CommonModule, ChatroomComponent],
+    selector: 'mchat-chats',
+    templateUrl: './chats.component.html',
+    styleUrl: './chats.component.sass',
+    imports: [NavbarComponent, ChatroomListComponent, RouterOutlet, CommonModule, ChatroomComponent]
 })
 export class ChatsComponent {
 	private readonly activatedRoute: ActivatedRoute = inject(ActivatedRoute);

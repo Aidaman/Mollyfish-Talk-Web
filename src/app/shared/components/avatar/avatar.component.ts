@@ -1,11 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-	selector: 'mchat-avatar',
-	standalone: true,
-	imports: [],
-	templateUrl: './avatar.component.html',
-	styleUrl: './avatar.component.sass',
+    selector: 'mchat-avatar',
+    imports: [],
+    templateUrl: './avatar.component.html',
+    styleUrl: './avatar.component.sass'
 })
 export class AvatarComponent {
 	@Output()

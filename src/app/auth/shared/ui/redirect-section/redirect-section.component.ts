@@ -4,11 +4,10 @@ import { TextButtonComponent } from '../../../../shared/components/buttons/text-
 import { Router } from '@angular/router';
 
 @Component({
-	selector: 'mchat-redirect-section',
-	standalone: true,
-	templateUrl: './redirect-section.component.html',
-	styleUrl: './redirect-section.component.sass',
-	imports: [SeparatorComponent, TextButtonComponent],
+    selector: 'mchat-redirect-section',
+    templateUrl: './redirect-section.component.html',
+    styleUrl: './redirect-section.component.sass',
+    imports: [SeparatorComponent, TextButtonComponent]
 })
 export class RedirectSectionComponent {
 	private readonly router: Router = inject(Router);

@@ -8,18 +8,17 @@ import { SeparatorComponent } from '../shared/components/separator/separator.com
 import { InputComponent } from '../shared/components/input/input.component';
 
 @Component({
-	selector: 'mchat-auth',
-	standalone: true,
-	templateUrl: './auth.component.html',
-	styleUrl: './auth.component.sass',
-	imports: [
-		RouterOutlet,
-		FilledButtonComponent,
-		OutlinedButtonComponent,
-		RaisedButtonComponent,
-		TextButtonComponent,
-		SeparatorComponent,
-		InputComponent,
-	],
+    selector: 'mchat-auth',
+    templateUrl: './auth.component.html',
+    styleUrl: './auth.component.sass',
+    imports: [
+        RouterOutlet,
+        FilledButtonComponent,
+        OutlinedButtonComponent,
+        RaisedButtonComponent,
+        TextButtonComponent,
+        SeparatorComponent,
+        InputComponent,
+    ]
 })
 export class AuthComponent {}

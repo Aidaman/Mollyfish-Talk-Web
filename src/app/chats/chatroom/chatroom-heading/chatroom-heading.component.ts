@@ -5,11 +5,10 @@ import { IsDirectMessagesPipe } from './is-direct-messages.pipe';
 import { CommonModule } from '@angular/common';
 
 @Component({
-	selector: 'mchat-chatroom-heading',
-	standalone: true,
-	templateUrl: './chatroom-heading.component.html',
-	styleUrl: './chatroom-heading.component.sass',
-	imports: [AvatarComponent, IsDirectMessagesPipe, CommonModule],
+    selector: 'mchat-chatroom-heading',
+    templateUrl: './chatroom-heading.component.html',
+    styleUrl: './chatroom-heading.component.sass',
+    imports: [AvatarComponent, IsDirectMessagesPipe, CommonModule]
 })
 export class ChatroomHeadingComponent {
 	@Input({ required: true })

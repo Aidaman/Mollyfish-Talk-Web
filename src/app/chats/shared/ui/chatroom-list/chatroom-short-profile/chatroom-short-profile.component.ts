@@ -7,11 +7,10 @@ import { ReadCheckComponent } from '../../read-check/read-check.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
-	selector: 'mchat-chatroom-short-profile',
-	standalone: true,
-	templateUrl: './chatroom-short-profile.component.html',
-	styleUrl: './chatroom-short-profile.component.sass',
-	imports: [ReadCheckComponent, CommonModule],
+    selector: 'mchat-chatroom-short-profile',
+    templateUrl: './chatroom-short-profile.component.html',
+    styleUrl: './chatroom-short-profile.component.sass',
+    imports: [ReadCheckComponent, CommonModule]
 })
 export class ChatroomShortProfileComponent {
 	private readonly router: Router = inject(Router);

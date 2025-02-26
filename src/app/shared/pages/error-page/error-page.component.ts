@@ -4,11 +4,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Observable, switchMap, of } from 'rxjs';
 
 @Component({
-	selector: 'mchat-error-page',
-	standalone: true,
-	imports: [CommonModule],
-	templateUrl: './error-page.component.html',
-	styleUrl: './error-page.component.sass',
+    selector: 'mchat-error-page',
+    imports: [CommonModule],
+    templateUrl: './error-page.component.html',
+    styleUrl: './error-page.component.sass'
 })
 export class ErrorPageComponent {
 	private activeRoute: ActivatedRoute = inject(ActivatedRoute);

@@ -5,11 +5,10 @@ import { BehaviorSubject } from 'rxjs';
 import { ThemeService } from 'shared/services/theme.service';
 
 @Component({
-	selector: 'mchat-chatroom-not-selected',
-	standalone: true,
-	templateUrl: './chatroom-not-selected.component.html',
-	styleUrl: './chatroom-not-selected.component.sass',
-	imports: [ChatroomBackgroundPipe, CommonModule],
+    selector: 'mchat-chatroom-not-selected',
+    templateUrl: './chatroom-not-selected.component.html',
+    styleUrl: './chatroom-not-selected.component.sass',
+    imports: [ChatroomBackgroundPipe, CommonModule]
 })
 export class ChatroomNotSelectedComponent {
 	private readonly themeService: ThemeService = inject(ThemeService);

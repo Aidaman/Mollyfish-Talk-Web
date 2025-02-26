@@ -5,11 +5,10 @@ import { InputComponent } from '../../shared/components/input/input.component';
 import { Router } from '@angular/router';
 
 @Component({
-	selector: 'mchat-recovery',
-	standalone: true,
-	templateUrl: './recovery.component.html',
-	styleUrl: './recovery.component.sass',
-	imports: [FilledButtonComponent, RedirectSectionComponent, InputComponent],
+    selector: 'mchat-recovery',
+    templateUrl: './recovery.component.html',
+    styleUrl: './recovery.component.sass',
+    imports: [FilledButtonComponent, RedirectSectionComponent, InputComponent]
 })
 export class RecoveryComponent {
 	private readonly router: Router = inject(Router);

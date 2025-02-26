@@ -7,11 +7,10 @@ import { RedirectSectionComponent } from '../shared/ui/redirect-section/redirect
 import { Router } from '@angular/router';
 
 @Component({
-	selector: 'mchat-login',
-	standalone: true,
-	templateUrl: './login.component.html',
-	styleUrl: './login.component.sass',
-	imports: [InputComponent, TextButtonComponent, CheckboxComponent, FilledButtonComponent, RedirectSectionComponent],
+    selector: 'mchat-login',
+    templateUrl: './login.component.html',
+    styleUrl: './login.component.sass',
+    imports: [InputComponent, TextButtonComponent, CheckboxComponent, FilledButtonComponent, RedirectSectionComponent]
 })
 export class LoginComponent {
 	private readonly router: Router = inject(Router);

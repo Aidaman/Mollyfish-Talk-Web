@@ -10,18 +10,17 @@ import { Observable, map } from 'rxjs';
 import { CommonModule } from '@angular/common';
 
 @Component({
-	selector: 'mchat-navbar',
-	standalone: true,
-	templateUrl: './navbar.component.html',
-	styleUrl: './navbar.component.sass',
-	imports: [
-		CommonModule,
-		ThemeChangeButtonComponent,
-		NgIconComponent,
-		SeparatorComponent,
-		RoundIconButtonComponent,
-		AvatarComponent,
-	],
+    selector: 'mchat-navbar',
+    templateUrl: './navbar.component.html',
+    styleUrl: './navbar.component.sass',
+    imports: [
+        CommonModule,
+        ThemeChangeButtonComponent,
+        NgIconComponent,
+        SeparatorComponent,
+        RoundIconButtonComponent,
+        AvatarComponent,
+    ]
 })
 export class NavbarComponent {
 	private readonly activatedRoute: ActivatedRoute = inject(ActivatedRoute);

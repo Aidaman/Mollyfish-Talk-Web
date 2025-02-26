@@ -12,18 +12,17 @@ import { ID } from 'shared/models/id.type';
 import { ApplyFolderPipe } from './apply-folder.pipe';
 
 @Component({
-	selector: 'mchat-chatroom-list',
-	standalone: true,
-	templateUrl: './chatroom-list.component.html',
-	styleUrl: './chatroom-list.component.sass',
-	imports: [
-		CommonModule,
-		ChatroomShortProfileComponent,
-		GetChatroomsPipe,
-		SearchComponent,
-		FoldersComponent,
-		ApplyFolderPipe,
-	],
+    selector: 'mchat-chatroom-list',
+    templateUrl: './chatroom-list.component.html',
+    styleUrl: './chatroom-list.component.sass',
+    imports: [
+        CommonModule,
+        ChatroomShortProfileComponent,
+        GetChatroomsPipe,
+        SearchComponent,
+        FoldersComponent,
+        ApplyFolderPipe,
+    ]
 })
 export class ChatroomListComponent {
 	@Input({ required: true })

@@ -5,11 +5,10 @@ import { ID } from 'shared/models/id.type';
 import { RaisedButtonComponent } from '../../../../shared/components/buttons/raised-button/raised-button.component';
 
 @Component({
-	selector: 'mchat-reaction',
-	standalone: true,
-	templateUrl: './reaction.component.html',
-	styleUrl: './reaction.component.sass',
-	imports: [CommonModule, RaisedButtonComponent],
+    selector: 'mchat-reaction',
+    templateUrl: './reaction.component.html',
+    styleUrl: './reaction.component.sass',
+    imports: [CommonModule, RaisedButtonComponent]
 })
 export class ReactionComponent {
 	@Input({ required: true })

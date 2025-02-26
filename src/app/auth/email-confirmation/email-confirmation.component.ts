@@ -5,11 +5,10 @@ import { RedirectSectionComponent } from '../shared/ui/redirect-section/redirect
 import { Router } from '@angular/router';
 
 @Component({
-	selector: 'mchat-email-confirmation',
-	standalone: true,
-	templateUrl: './email-confirmation.component.html',
-	styleUrl: './email-confirmation.component.sass',
-	imports: [InputComponent, FilledButtonComponent, RedirectSectionComponent],
+    selector: 'mchat-email-confirmation',
+    templateUrl: './email-confirmation.component.html',
+    styleUrl: './email-confirmation.component.sass',
+    imports: [InputComponent, FilledButtonComponent, RedirectSectionComponent]
 })
 export class EmailConfirmationComponent {
 	public router: Router = inject(Router);

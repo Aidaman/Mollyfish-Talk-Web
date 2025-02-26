@@ -1,7 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-	template: ``,
+    template: ``,
+    standalone: false
 })
 export abstract class Button {
 	@Output()

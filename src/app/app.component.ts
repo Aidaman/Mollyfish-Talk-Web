@@ -17,24 +17,23 @@ import {
 } from '@ng-icons/material-icons/baseline';
 
 @Component({
-	selector: 'app-root',
-	standalone: true,
-	imports: [RouterOutlet, FormsModule, ReactiveFormsModule],
-	template: `<router-outlet></router-outlet>`,
-	viewProviders: [
-		provideIcons({
-			matWbSunny,
-			matNightlight,
-			matGroup,
-			matChat,
-			matWorkspaces,
-			matSearch,
-			matDone,
-			matDoneAll,
-			matSend,
-			matAttachFile,
-			matEmojiEmotions,
-		}),
-	],
+    selector: 'app-root',
+    imports: [RouterOutlet, FormsModule, ReactiveFormsModule],
+    template: `<router-outlet></router-outlet>`,
+    viewProviders: [
+        provideIcons({
+            matWbSunny,
+            matNightlight,
+            matGroup,
+            matChat,
+            matWorkspaces,
+            matSearch,
+            matDone,
+            matDoneAll,
+            matSend,
+            matAttachFile,
+            matEmojiEmotions,
+        }),
+    ]
 })
 export class AppComponent {}

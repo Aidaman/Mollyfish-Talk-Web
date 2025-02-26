@@ -10,11 +10,10 @@ import { UserService } from 'shared/services/user.service';
 import { RoundIconButtonComponent } from 'shared/components/buttons/round-icon-button/round-icon-button.component';
 
 @Component({
-	selector: 'mchat-message',
-	standalone: true,
-	templateUrl: './message.component.html',
-	styleUrl: './message.component.sass',
-	imports: [AvatarComponent, CommonModule, ReadCheckComponent, ReactionComponent, RoundIconButtonComponent],
+    selector: 'mchat-message',
+    templateUrl: './message.component.html',
+    styleUrl: './message.component.sass',
+    imports: [AvatarComponent, CommonModule, ReadCheckComponent, ReactionComponent, RoundIconButtonComponent]
 })
 export class MessageComponent {
 	@Input({ required: true })

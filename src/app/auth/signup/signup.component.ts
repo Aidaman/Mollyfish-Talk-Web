@@ -7,11 +7,10 @@ import { RedirectSectionComponent } from 'auth/shared/ui/redirect-section/redire
 import { Router } from '@angular/router';
 
 @Component({
-	selector: 'mchat-signup',
-	standalone: true,
-	templateUrl: './signup.component.html',
-	styleUrl: './signup.component.sass',
-	imports: [InputComponent, TextButtonComponent, CheckboxComponent, FilledButtonComponent, RedirectSectionComponent],
+    selector: 'mchat-signup',
+    templateUrl: './signup.component.html',
+    styleUrl: './signup.component.sass',
+    imports: [InputComponent, TextButtonComponent, CheckboxComponent, FilledButtonComponent, RedirectSectionComponent]
 })
 export class SignupComponent {
 	private readonly router: Router = inject(Router);

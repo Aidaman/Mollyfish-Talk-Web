@@ -6,12 +6,11 @@ import { Button } from '../button';
 import { CommonModule } from '@angular/common';
 
 @Component({
-	selector: 'mchat-round-icon-button',
-	standalone: true,
-	templateUrl: './round-icon-button.component.html',
-	styleUrl: './round-icon-button.component.sass',
-	imports: [CommonModule, RaisedButtonComponent, NgIconComponent],
-	viewProviders: [provideIcons({ matGroup, matChat, matWorkspaces, matSearch, matEmojiEmotions })],
+    selector: 'mchat-round-icon-button',
+    templateUrl: './round-icon-button.component.html',
+    styleUrl: './round-icon-button.component.sass',
+    imports: [CommonModule, RaisedButtonComponent, NgIconComponent],
+    viewProviders: [provideIcons({ matGroup, matChat, matWorkspaces, matSearch, matEmojiEmotions })]
 })
 export class RoundIconButtonComponent extends Button {
 	@Input({ required: true })

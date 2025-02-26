@@ -5,11 +5,10 @@ import { ID } from 'shared/models/id.type';
 import { CommonModule } from '@angular/common';
 
 @Component({
-	selector: 'mchat-folders',
-	standalone: true,
-	templateUrl: './folders.component.html',
-	styleUrl: './folders.component.sass',
-	imports: [TextButtonComponent, CommonModule],
+    selector: 'mchat-folders',
+    templateUrl: './folders.component.html',
+    styleUrl: './folders.component.sass',
+    imports: [TextButtonComponent, CommonModule]
 })
 export class FoldersComponent {
 	@Output()

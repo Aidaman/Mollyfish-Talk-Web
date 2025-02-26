@@ -7,11 +7,10 @@ import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { RoundIconButtonComponent } from '../buttons/round-icon-button/round-icon-button.component';
 
 @Component({
-	selector: 'mchat-theme-change-button',
-	standalone: true,
-	templateUrl: './theme-change-button.component.html',
-	styleUrl: './theme-change-button.component.sass',
-	imports: [ThemePipe, CommonModule, NgIconComponent, RoundIconButtonComponent],
+    selector: 'mchat-theme-change-button',
+    templateUrl: './theme-change-button.component.html',
+    styleUrl: './theme-change-button.component.sass',
+    imports: [ThemePipe, CommonModule, NgIconComponent, RoundIconButtonComponent]
 })
 export class ThemeChangeButtonComponent implements OnInit {
 	private themeService: ThemeService = inject(ThemeService);

@@ -14,21 +14,20 @@ import { GetMessagesPipe } from './get-messages.pipe';
 import { MessageInputComponent } from './message-input/message-input.component';
 
 @Component({
-	selector: 'mchat-chatroom',
-	standalone: true,
-	templateUrl: './chatroom.component.html',
-	styleUrl: './chatroom.component.sass',
-	imports: [
-		ReadCheckComponent,
-		CommonModule,
-		ChatroomBackgroundPipe,
-		ChatroomNotSelectedComponent,
-		ChatroomHeadingComponent,
-		GetChatroomPipe,
-		MessageComponent,
-		GetMessagesPipe,
-		MessageInputComponent,
-	],
+    selector: 'mchat-chatroom',
+    templateUrl: './chatroom.component.html',
+    styleUrl: './chatroom.component.sass',
+    imports: [
+        ReadCheckComponent,
+        CommonModule,
+        ChatroomBackgroundPipe,
+        ChatroomNotSelectedComponent,
+        ChatroomHeadingComponent,
+        GetChatroomPipe,
+        MessageComponent,
+        GetMessagesPipe,
+        MessageInputComponent,
+    ]
 })
 export class ChatroomComponent {
 	private readonly userService: UserService = inject(UserService);

@@ -5,11 +5,10 @@ import { FilledButtonComponent } from 'shared/components/buttons/filled-button/f
 import { InputComponent } from 'shared/components/input/input.component';
 
 @Component({
-	selector: 'mchat-new-password',
-	standalone: true,
-	imports: [InputComponent, FilledButtonComponent, RedirectSectionComponent],
-	templateUrl: './new-password.component.html',
-	styleUrl: './new-password.component.sass',
+    selector: 'mchat-new-password',
+    imports: [InputComponent, FilledButtonComponent, RedirectSectionComponent],
+    templateUrl: './new-password.component.html',
+    styleUrl: './new-password.component.sass'
 })
 export class NewPasswordComponent {
 	private readonly router: Router = inject(Router);
